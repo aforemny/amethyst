@@ -158,7 +158,7 @@ impl<'a, G: PartialEq + Send + Sync + 'static, I: WidgetId> UiButtonBuilder<G, I
         self
     }
 
-    /// Replace the default Handle<Texture> with `image`.
+    /// Replace the default UiImage with `image`.
     pub fn with_image(mut self, image: UiImage) -> Self {
         self.image = Some(image);
         self

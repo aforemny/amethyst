@@ -6,10 +6,8 @@ pub use self::{
     },
     system::{UiButtonSystem, UiButtonSystemDesc},
 };
-use crate::{define_widget, Interactable, UiSoundRetrigger, UiText, UiTransform};
-use amethyst_assets::Handle;
+use crate::{define_widget, Interactable, UiImage, UiSoundRetrigger, UiText, UiTransform};
 use amethyst_core::Parent;
-use amethyst_rendy::Texture;
 
 mod actions;
 mod builder;
@@ -21,7 +19,7 @@ define_widget!(UiButton =>
     components: [
         (has UiTransform as position on image_entity),
         (has UiTransform as text_position on text_entity),
-        (has Handle<Texture> as texture on image_entity),
+        (has UiImage as texture on image_entity),
         (has Interactable as mouse_reactive on image_entity),
         (has UiText as text on text_entity),
 
